@@ -1,0 +1,22 @@
+@model CategoryTour;
+
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Tạo danh mục cho tour</h4>
+            <form class="forms-sample" asp-action='create' method="post">
+                <div class="form-group">
+                    <label asp-for='@Model.name'></label>
+                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Name"
+                        asp-for='@Model.name' />
+                    <span asp-validation-for='@Model.name' class="text-danger  my-1 d-block"></span>
+                </div>
+                <button type="submit" class="btn btn-primary mr-2">
+                    Tạo mới
+                </button>
+                <button class="btn btn-light">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>

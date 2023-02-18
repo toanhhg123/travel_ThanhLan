@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- base:css -->
+  <link rel="stylesheet" href="~/Admin/vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="~/Admin/vendors/css/vendor.bundle.base.css">
+  @* <link href="https://fonts.cdnfonts.com/css/wrong-delivery" rel="stylesheet"> *@
+
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="~/Admin/css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="~/Admin/images/favicon.png" />
+  <script src="~/lib/jquery/dist/jquery.min.js"></script>
+  <script src="~/lib/jqueryui/jquery-ui.min.js"></script>
+  <script src="~/lib/elfinder/js/elfinder.min.js"></script>
+  <script src="~/ckeditor/ckeditor.js"></script>
+
+  <style>
+    img {
+      max-width: 100%;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container-scroller d-flex">
+    <!-- partial:./partials/_sidebar.html -->
+    <partial name="_Sidebar" />
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:./partials/_navbar.html -->
+      <partial name="_Navbar" />
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          @RenderBody()
+          <!-- row end -->
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:./partials/_footer.html -->
+        <footer class="footer">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©
+                  bootstrapdash.com 2020</span>
+                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Distributed By: <a
+                    href="https://www.themewagon.com/" target="_blank">ThemeWagon</a></span>
+                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a
+                    href="https://www.bootstrapdash.com/" target="_blank">Bootstrap dashboard templates</a> from
+                  Bootstrapdash.com</span>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- base:js -->
+  <script src="~/Admin/vendors/js/vendor.bundle.base.js"></script>
+  <script src="~/Admin/vendors/chart.js/Chart.min.js"></script>
+  <script src="~/Admin/js/off-canvas.js"></script>
+  <script src="~/Admin/js/hoverable-collapse.js"></script>
+  <script src="~/Admin/js/template.js"></script>
+  <script src="~/Admin/js/dashboard.js"></script>
+
+
+
+  <script src="~/admin/js/file-upload.js"></script>
+  @await RenderSectionAsync("Scripts", required: false)
+  <partial name="_ValidationScriptsPartial" />
+  @await Component.InvokeAsync("NToastNotify");
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+﻿<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+        <li class="nav-item sidebar-category">
+            <p>Navigation</p>
+            <span></span>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-action='index' asp-controller='home' asp-area='admin'>
+                <i class="mdi mdi-view-quilt menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+                <div class="badge badge-info badge-pill">2</div>
+            </a>
+        </li>
+        <li class="nav-item sidebar-category">
+            <p>Components</p>
+            <span></span>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" asp-action='index' asp-area='admin' asp-controller='tour'>
+                <i class="mdi mdi-view-headline menu-icon"></i>
+                <span class="menu-title">Tours</span>
+            </a>
+        </li>
+
+         <li class="nav-item">
+            <a class="nav-link" asp-action='index' asp-area='admin' asp-controller='categoryTour'>
+                <i class="mdi mdi-view-headline menu-icon"></i>
+                <span class="menu-title">Danh Mục</span>
+            </a>
+        </li>
+
+        
+
+
+
+
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                <i class="mdi mdi-account menu-icon"></i>
+                <span class="menu-title">Users</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="Index" asp-controller="Account" asp-areas="Admin"> Accounts </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+          <li class="nav-item">
+            <a class="nav-link" asp-action='index' asp-area='files' asp-controller='fileManager'>
+                <i class="mdi mdi-view-headline menu-icon"></i>
+                <span class="menu-title">Files</span>
+            </a>
+        </li>
+        <li class="nav-item sidebar-category">
+            <p>Apps</p>
+            <span></span>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="docs/documentation.html">
+                <i class="mdi mdi-file-document-box-outline menu-icon"></i>
+                <span class="menu-title">Documentation</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <form asp-action="Logout" asp-controller="Auth" asp-area="" method="post" class="nav-link">
+                <button type="submit" class="btn bg-danger btn-sm menu-title">Logout</button>
+            </form>
+        </li>
+    </ul>
+</nav>

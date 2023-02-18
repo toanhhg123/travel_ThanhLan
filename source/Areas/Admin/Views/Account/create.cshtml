@@ -1,0 +1,59 @@
+@model source.Models.UserRegister;
+
+@{
+    var roles = ViewBag.roles as List<Role>;
+}
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Create Account</h4>
+            <form class="forms-sample" asp-action='create' method="post">
+                <div class="form-group">
+                    <label asp-for='@Model.UserName'></label>
+                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Name"
+                        asp-for='@Model.UserName' />
+                    <span asp-validation-for='@Model.UserName' class="text-danger  my-1 d-block"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for='@Model.Email'>Địa chỉ Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email"
+                        asp-for='@Model.Email' />
+                    <span asp-validation-for='@Model.Email' class="bg-danger text-white my-1 d-block"></span>
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword4">Mật Khẩu</label>
+                    <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Password"
+                        asp-for='@Model.Password' />
+                    <span asp-validation-for='@Model.Password' class="bg-danger text-white my-1 d-block"></span>
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword4">Nhập lại mật khẩu: </label>
+                    <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Password"
+                        asp-for='@Model.ConfirmPassword' />
+                    <span asp-validation-for='@Model.ConfirmPassword' class="bg-danger text-white my-1 d-block"></span>
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleSelectGender">Roles</label>
+                    <select name="role" class="form-control" id="exampleSelectGender">
+                        @if (roles != null)
+                        {
+                            foreach (var item in roles)
+                            {
+                                <option value="@item.id">@item.RoleName</option>
+                            }
+                        }
+                    </select>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary mr-2">
+                    Submit
+                </button>
+                <button class="btn btn-light">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
