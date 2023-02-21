@@ -21,6 +21,10 @@ namespace source.Models
         public DbSet<Account> Accounts { set; get; } = default!;
         public DbSet<Tour> Tours { set; get; } = default!;
         public DbSet<TourImage> TourImages { set; get; } = default!;
+        public DbSet<Hotel> Hotels { set; get; } = default!;
+
+        public DbSet<HotelImg> HotelImages { set; get; } = default!;
+
 
 
 
@@ -53,6 +57,19 @@ namespace source.Models
 
 
             modelBuilder.Entity<TourImage>()
+                         .Property(b => b.id)
+                         .HasDefaultValue("newid()");
+
+            modelBuilder.Entity<Hotel>()
+          .Property(b => b.id)
+          .HasDefaultValue("newid()");
+
+            modelBuilder.Entity<Hotel>()
+              .Property(b => b.createdAt)
+         .HasDefaultValueSql("getdate()");
+
+
+            modelBuilder.Entity<HotelImg>()
                          .Property(b => b.id)
                          .HasDefaultValue("newid()");
 

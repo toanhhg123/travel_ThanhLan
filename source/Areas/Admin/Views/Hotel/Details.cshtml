@@ -1,13 +1,11 @@
-@model source.Models.Tour;
+@model source.Models.Hotel;
 
-@{
-    var CategoryTours = ViewBag.CategoryTours as List<CategoryTour>;
-}
+
 <div class="col-12 grid-margin stretch-card">
     <div class="card">
         <div class="card-body">
             <h4 class="card-title">Tour : @Model.title</h4>
-            <form class="forms-sample" enctype="multipart/form-data" asp-action='update'  method="post" asp-route-redirectUrl='/Admin/Tour/Details/@Model?.id' >
+            <form class="forms-sample" enctype="multipart/form-data" asp-action='update'  method="post" asp-route-redirectUrl='/Admin/hotel/Details/@Model?.id' >
                 <div class="form-group">
                     <label asp-for='@Model.id'></label>
                     <input type="text" class="form-control" readonly id="exampleInputName1" placeholder="Name"
@@ -86,26 +84,6 @@
                         @Model.departureSchedule
                     </textarea>
                 </div>
-
-                
-               
-             
-              
-                <div class="form-group">
-                    <label for="exampleSelectGender">Chọn Danh Mục:</label>
-                    <select name="categoryTour" class="form-control" id="exampleSelectGender">
-                        <option value="@Model.categoryTour.id" selected>@Model.categoryTour.name</option>
-                        @if (CategoryTours != null)
-                        {
-                            foreach (var item in CategoryTours)
-                            {
-                                <option value="@item.id" >@item.name</option>
-                            }
-                        }
-                    </select>
-                </div>
-                
-
                 <button type="submit" class="btn btn-primary mr-2">
                     update
                 </button>
@@ -114,10 +92,10 @@
 
              <div class="d-flex mt-2">
                    @{
-                     if(Model?.TourImages != null){
-                        foreach (var item in Model.TourImages)
+                     if(Model?.HotelImgs != null){
+                        foreach (var item in Model.HotelImgs)
                         {
-                            <form asp-action="DeleteImg" asp-route-redirectUrl="/Admin/Tour/Details/@Model?.id">
+                            <form asp-action="DeleteImg" asp-route-redirectUrl="/Admin/hotel/Details/@Model?.id">
                               <div class="card ml-2" style="width: 200px;">
                                 <input name="id"  value="@item.id"  hidden>
                                 <input name="src"  value="@item.src"  hidden>
@@ -140,8 +118,8 @@
 <div class="col-12 grid-margin stretch-card">
     <div class="card">
         <div class="card-body">
-            <form asp-action="AddImg" method="post" asp-route-redirectUrl="/Admin/Tour/Details/@Model?.id" enctype="multipart/form-data" >
-                <input  hidden name="tourId" value="@Model?.id" />
+            <form asp-action="AddImg" method="post" asp-route-redirectUrl="/Admin/hotel/Details/@Model?.id" enctype="multipart/form-data" >
+                <input  hidden name="hotelId" value="@Model?.id" />
                 <div class="form-group">
                     <label>Thêm Hình Ảnh : </label>
                     <input  class="form-control" id="exampleInputName1" placeholder="Name"

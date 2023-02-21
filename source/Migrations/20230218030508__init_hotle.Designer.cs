@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using source.Models;
 
@@ -11,9 +12,11 @@ using source.Models;
 namespace source.Migrations
 {
     [DbContext(typeof(TravelContext))]
-    partial class TravelContextModelSnapshot : ModelSnapshot
+    [Migration("20230218030508__init_hotle")]
+    partial class inithotle
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -81,6 +84,10 @@ namespace source.Migrations
                         .HasColumnType("nvarchar(450)")
                         .HasDefaultValue("newid()");
 
+                    b.Property<string>("categoryTourid")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime?>("createdAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
@@ -123,6 +130,8 @@ namespace source.Migrations
 
                     b.HasKey("id");
 
+                    b.HasIndex("categoryTourid");
+
                     b.ToTable("Hotels");
                 });
 
@@ -136,6 +145,9 @@ namespace source.Migrations
                     b.Property<string>("Hotelid")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("Tourid")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("alt")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -147,6 +159,8 @@ namespace source.Migrations
                     b.HasKey("id");
 
                     b.HasIndex("Hotelid");
+
+                    b.HasIndex("Tourid");
 
                     b.ToTable("HotelImages");
                 });
@@ -262,13 +276,28 @@ namespace source.Migrations
                     b.Navigation("Role");
                 });
 
+            modelBuilder.Entity("source.Models.Hotel", b =>
+                {
+                    b.HasOne("source.Models.CategoryTour", "categoryTour")
+                        .WithMany()
+                        .HasForeignKey("categoryTourid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("categoryTour");
+                });
+
             modelBuilder.Entity("source.Models.HotelImg", b =>
                 {
-                    b.HasOne("source.Models.Hotel", "Hotel")
+                    b.HasOne("source.Models.Hotel", null)
                         .WithMany("HotelImgs")
                         .HasForeignKey("Hotelid");
 
-                    b.Navigation("Hotel");
+                    b.HasOne("source.Models.Tour", "Tour")
+                        .WithMany()
+                        .HasForeignKey("Tourid");
+
+                    b.Navigation("Tour");
                 });
 
             modelBuilder.Entity("source.Models.Tour", b =>
