@@ -1,7 +1,9 @@
-﻿using System.Diagnostics;
+﻿using System.Security.Cryptography.X509Certificates;
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using source.Models;
+using NToastNotify;
 
 namespace source.Controllers;
 
@@ -9,12 +11,14 @@ public class TourController : Controller
 {
     private readonly ILogger<TourController> _logger;
     private readonly TravelContext _Dbcontext;
+    private readonly IToastNotification _toastNotification;
 
 
-    public TourController(ILogger<TourController> logger, TravelContext dbContext)
+    public TourController(ILogger<TourController> logger, TravelContext dbContext, IToastNotification toastNotification)
     {
         _Dbcontext = dbContext;
         _logger = logger;
+        _toastNotification = toastNotification;
     }
 
     [HttpGet]
@@ -50,6 +54,31 @@ public class TourController : Controller
         catch (System.Exception ex)
         {
             return Ok(ex.Message);
+        }
+    }
+
+
+     [HttpPost]
+    public async Task<IActionResult> OrderTour(OrderTour orderTour,
+         string redirectUrl,
+         string tourId)
+    {
+        redirectUrl = redirectUrl ?? "/tour";
+        try
+        {
+            var tour = await _Dbcontext.Tours.FirstOrDefaultAsync(x => x.id == tourId);
+            if(tour == null) throw new Exception("Không tìm thấy tour Du lịch cần đặt");
+           
+            orderTour.Tour = tour;
+            await _Dbcontext.OrderTours.AddAsync(orderTour);
+            await _Dbcontext.SaveChangesAsync();
+            _toastNotification.AddSuccessToastMessage("dat tour thanh cong !!!");
+            return Redirect(redirectUrl);
+        }
+        catch (System.Exception)
+        {
+            _toastNotification.AddErrorToastMessage("đặt tour không thành công vui lòng nhập đầy đủ thông tin");
+            return Redirect(redirectUrl);
         }
     }
 

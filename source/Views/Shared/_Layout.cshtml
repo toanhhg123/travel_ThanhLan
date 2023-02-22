@@ -53,6 +53,10 @@
   @* <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> *@
   <script src="~/client/js/google-map.js"></script>
   <script src="~/client/js/main.js"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+  @await RenderSectionAsync("Scripts", required: false)
+  <partial name="_ValidationScriptsPartial" />
+  @await Component.InvokeAsync("NToastNotify");
+
+
 </body>
 </html>

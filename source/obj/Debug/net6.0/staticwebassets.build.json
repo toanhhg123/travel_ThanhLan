@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4Fn59DFUCZrBQsNJicoU1aPcrABwlBtND6tkw0DqiNU=",
+  "Hash": "eobh5q5vRU62N5d8vI2OdR2aL7o2MIF9j+EKxrI4fBw=",
   "Source": "source",
   "BasePath": "_content/source",
   "Mode": "Default",
@@ -16201,6 +16201,40 @@
       "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
+      "Identity": "/Users/toanle/Downloads/travel-main/source/wwwroot/files/32fc0e37-8ac5-4d5a-a846-ba133cf4faa9.png",
+      "SourceId": "source",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/toanle/Downloads/travel-main/source/wwwroot/",
+      "BasePath": "_content/source",
+      "RelativePath": "files/32fc0e37-8ac5-4d5a-a846-ba133cf4faa9.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/files/32fc0e37-8ac5-4d5a-a846-ba133cf4faa9.png"
+    },
+    {
+      "Identity": "/Users/toanle/Downloads/travel-main/source/wwwroot/files/581f33a8-6d49-446b-a48a-8894e126c929.png",
+      "SourceId": "source",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/toanle/Downloads/travel-main/source/wwwroot/",
+      "BasePath": "_content/source",
+      "RelativePath": "files/581f33a8-6d49-446b-a48a-8894e126c929.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/files/581f33a8-6d49-446b-a48a-8894e126c929.png"
+    },
+    {
       "Identity": "/Users/toanle/Downloads/travel-main/source/wwwroot/files/a904e4a4-8a72-4d4b-a1af-2ce8d39179dd.jpg",
       "SourceId": "source",
       "SourceType": "Discovered",
@@ -16216,6 +16250,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/files/a904e4a4-8a72-4d4b-a1af-2ce8d39179dd.jpg"
+    },
+    {
+      "Identity": "/Users/toanle/Downloads/travel-main/source/wwwroot/files/b1864424-3c70-45ae-8dbc-02c72d09de2c.png",
+      "SourceId": "source",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/toanle/Downloads/travel-main/source/wwwroot/",
+      "BasePath": "_content/source",
+      "RelativePath": "files/b1864424-3c70-45ae-8dbc-02c72d09de2c.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/files/b1864424-3c70-45ae-8dbc-02c72d09de2c.png"
     },
     {
       "Identity": "/Users/toanle/Downloads/travel-main/source/wwwroot/files/destination-5.jpg",

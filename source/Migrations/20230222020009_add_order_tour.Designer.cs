@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using source.Models;
 
@@ -11,9 +12,11 @@ using source.Models;
 namespace source.Migrations
 {
     [DbContext(typeof(TravelContext))]
-    partial class TravelContextModelSnapshot : ModelSnapshot
+    [Migration("20230222020009_add_order_tour")]
+    partial class addordertour
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -136,6 +139,9 @@ namespace source.Migrations
                     b.Property<string>("Hotelid")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("OrderTourid")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("alt")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -148,6 +154,8 @@ namespace source.Migrations
 
                     b.HasIndex("Hotelid");
 
+                    b.HasIndex("OrderTourid");
+
                     b.ToTable("HotelImages");
                 });
 
@@ -157,9 +165,6 @@ namespace source.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(450)")
                         .HasDefaultValue("newid()");
-
-                    b.Property<bool>("IsConfirm")
-                        .HasColumnType("bit");
 
                     b.Property<string>("Tourid")
                         .HasColumnType("nvarchar(450)");
@@ -316,6 +321,10 @@ namespace source.Migrations
                         .WithMany("HotelImgs")
                         .HasForeignKey("Hotelid");
 
+                    b.HasOne("source.Models.OrderTour", null)
+                        .WithMany("HotelImgs")
+                        .HasForeignKey("OrderTourid");
+
                     b.Navigation("Hotel");
                 });
 
@@ -349,6 +358,11 @@ namespace source.Migrations
                 });
 
             modelBuilder.Entity("source.Models.Hotel", b =>
+                {
+                    b.Navigation("HotelImgs");
+                });
+
+            modelBuilder.Entity("source.Models.OrderTour", b =>
                 {
                     b.Navigation("HotelImgs");
                 });

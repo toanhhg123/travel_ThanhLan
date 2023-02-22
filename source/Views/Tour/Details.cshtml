@@ -652,7 +652,7 @@
     aria-labelledby="exampleModalLabel"
     aria-hidden="true"
   >
-    <div class="modal-dialog" role="document">
+    <form asp-action="OrderTour" asp-route-tourId="@Model.id" asp-route-redirectUrl="/tour/details/@Model.id" method="post" class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">@Model.title</h5>
@@ -667,11 +667,11 @@
           </button>
         </div>
         <div class="modal-body">
-          <div class="fields">
+          <div  class="fields">
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Name" />
+                  <input type="text" class="form-control" placeholder="Name" name="name"/>
                 </div>
               </div>
               <div class="col-md-12">
@@ -680,12 +680,13 @@
                     type="text"
                     class="form-control"
                     placeholder="Phone Number"
+                    name="phone"
                   />
                 </div>
               </div>
               <div class="col-md-12">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Email" />
+                  <input type="text" class="form-control" placeholder="Email" name="email"/>
                 </div>
               </div>
               <div class="col-md-12">
@@ -694,6 +695,7 @@
                     type="text"
                     class="form-control"
                     placeholder="Số Người Lớn"
+                    name="adultCount"
                   />
                 </div>
               </div>
@@ -703,16 +705,17 @@
                     type="text"
                     class="form-control"
                     placeholder="Số Trẻ Em"
+                    name="childrenCount"
                   />
                 </div>
               </div>
-
               <div class="col-md-12">
                 <div class="form-group">
                   <input
                     type="text"
                     class="form-control"
                     placeholder="Lời Nhắn"
+                    name="message"
                   />
                 </div>
               </div>
@@ -723,9 +726,9 @@
           <button type="button" class="btn btn-secondary" data-dismiss="modal">
             Đóng
           </button>
-          <button type="button" class="btn btn-primary">Đặt Ngay</button>
+          <button type="submit" class="btn btn-primary">Đặt Ngay</button>
         </div>
       </div>
-    </div>
+    </form>
   </div>
 </section>
