@@ -7,7 +7,7 @@
     <div class="card">
         <div class="card-body">
             <h4 class="card-title">Tour : @Model.title</h4>
-            <form class="forms-sample" enctype="multipart/form-data" asp-action='update'  method="post" asp-route-redirectUrl='/Admin/Tour/Details/@Model?.id' >
+            <form class="forms-sample" asp-action="Confirm"  method="post" asp-route-redirectUrl='/Admin/OrderTour/Details/@Model?.id' >
                 <div class="form-group">
                     <label asp-for='@Model.id'></label>
                     <input type="text" class="form-control" readonly id="exampleInputName1" placeholder="Name"
