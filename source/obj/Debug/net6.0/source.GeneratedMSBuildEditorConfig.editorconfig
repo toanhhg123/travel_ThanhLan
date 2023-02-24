@@ -55,6 +55,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvSG90ZWwvaW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/toanle/Downloads/travel-main/source/Areas/Admin/Views/OrderHotel/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvT3JkZXJIb3RlbC9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/toanle/Downloads/travel-main/source/Areas/Admin/Views/OrderHotel/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvT3JkZXJIb3RlbC9pbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/toanle/Downloads/travel-main/source/Areas/Admin/Views/OrderTour/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvT3JkZXJUb3VyL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -141,6 +149,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/toanle/Downloads/travel-main/source/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/toanle/Downloads/travel-main/source/Views/Hotel/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG90ZWwvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/toanle/Downloads/travel-main/source/Views/Hotel/index.cshtml]

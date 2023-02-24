@@ -1,4 +1,6 @@
 @model IEnumerable<source.Models.Tour>
+@using source.utils;
+
 	<div class="hero-wrap js-fullheight" style="background-image: url('/client/images/bg_1.jpg');">
 		<div class="overlay"></div>
 		<div class="container">
@@ -135,7 +137,7 @@
 												</p>
 											</div>
 											<div class="two">
-												<span class="price">@item.price</span>
+												<span class="price">@Utils.CreateVnd(item.price)</span>
 											</div>
 										</div>
 										<p>Far far away, behind the word mountains, far from the countries</p>

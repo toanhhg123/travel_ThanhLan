@@ -25,6 +25,11 @@ namespace source.utils
 
             return hash.ToString();
         }
+
+        public static string CreateVnd(double price){
+            var info = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
+            return String.Format(info, "{0:c}", price).Replace(" ","");
+        }
         public static string GetIpAddress(IHttpContextAccessor httpContextAccessor)
         {
             string ipAddress = "";

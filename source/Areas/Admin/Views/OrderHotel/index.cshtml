@@ -1,4 +1,4 @@
-@model source.utils.PaginatedList<source.Models.OrderTour>;
+@model source.utils.PaginatedList<source.Models.OrderHotel>;
 <div class="col-lg-12 grid-margin stretch-card">
     <div class="card">
         <div class="card-body">
@@ -76,7 +76,7 @@
                                     </td>
 
                                     <td>
-                                        @item.Tour.title
+                                        @item.Hotel.title
                                     </td>
 
                                      <td>
@@ -97,12 +97,14 @@
                 </table>
             </div>
            <div class="mt-2 d-flex" style="justify-content: center">
-             @if(Model.PageIndex > 1){
+             @if(Model != null){
+                @if(Model.PageIndex > 1){
                 <a asp-route-pageIndex="@(Model.PageIndex - 1)" type="button" class="btn btn-primary btn-sm">pre</a>
-            }
-            @if(Model.PageIndex < Model.TotalPages){
-                <a asp-route-pageIndex="@(Model.PageIndex + 1)"  type="button" class="btn btn-primary btn-sm">next</a>
-            }
+                }
+                @if(Model.PageIndex < Model.TotalPages){
+                    <a asp-route-pageIndex="@(Model.PageIndex + 1)"  type="button" class="btn btn-primary btn-sm">next</a>
+                }
+             }
            </div>
         </div>
     </div>

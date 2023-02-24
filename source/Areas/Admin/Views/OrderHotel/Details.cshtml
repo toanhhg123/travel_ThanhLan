@@ -1,0 +1,126 @@
+@model source.Models.OrderHotel;
+
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Hotel : @Model.Hotel.title</h4>
+            <form class="forms-sample"  asp-action='Confirm'  method="post" asp-route-redirectUrl='/Admin/OrderHotel/Details/@Model?.id' >
+                <div class="form-group">
+                    <label asp-for='@Model.id'>Order Id</label>
+                    <input type="text" class="form-control" readonly id="exampleInputName1" placeholder="Name"
+                        asp-for='@Model.id' />
+                    <span asp-validation-for='@Model.id' class="text-danger  my-1 d-block"></span>
+                </div>
+                 <div class="form-group">
+                    <label asp-for='@Model.name'></label>
+                    <input type="text" class="form-control" readonly id="exampleInputName1" placeholder="Name"
+                        asp-for='@Model.name' />
+                    <span asp-validation-for='@Model.name' class="text-danger  my-1 d-block"></span>
+                </div>
+
+                 <div class="form-group">
+                    <label asp-for='@Model.phone'></label>
+                    <input type="text" class="form-control" readonly id="exampleInputName1" placeholder="Name"
+                        asp-for='@Model.phone' />
+                    <span asp-validation-for='@Model.phone' class="text-danger  my-1 d-block"></span>
+                </div>
+
+                 <div class="form-group">
+                    <label asp-for='@Model.email'></label>
+                    <input type="text" class="form-control" readonly id="exampleInputName1" placeholder="Name"
+                        asp-for='@Model.email' />
+                    <span asp-validation-for='@Model.email' class="text-danger  my-1 d-block"></span>
+                </div>
+
+                 <div class="form-group">
+                    <label asp-for='@Model.adultCount'>Số Người Lớn</label>
+                    <input type="text" class="form-control" readonly id="exampleInputName1" placeholder="Name"
+                        asp-for='@Model.adultCount' />
+                    <span asp-validation-for='@Model.adultCount' class="text-danger  my-1 d-block"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for='@Model.childrenCount'>Số Trẻ em</label>
+                    <input type="text" class="form-control" readonly id="exampleInputName1" placeholder="Name"
+                        asp-for='@Model.childrenCount' />
+                    <span asp-validation-for='@Model.childrenCount' class="text-danger  my-1 d-block"></span>
+                </div>
+
+                 <div class="form-group">
+                    <label asp-for='@Model.message'></label>
+                    <input type="text" class="form-control" readonly id="exampleInputName1" placeholder="Name"
+                        asp-for='@Model.message' />
+                    <span asp-validation-for='@Model.message' class="text-danger  my-1 d-block"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <label asp-for='@Model.Hotel.id'>Hotel Id</label>
+                    <input type="text" class="form-control" readonly id="exampleInputName1" placeholder="Name"
+                        asp-for='@Model.Hotel.id' />
+                    <span asp-validation-for='@Model.Hotel.id' class="text-danger  my-1 d-block"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for='@Model.Hotel.title'></label>
+                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Name"
+                        asp-for='@Model.Hotel.title' />
+                    <span asp-validation-for='@Model.Hotel.title' class="text-danger  my-1 d-block"></span>
+                </div>
+                 <div class="form-group">
+                    <label asp-for='@Model.Hotel.price'></label>
+                    <input  class="form-control" id="exampleInputName1" placeholder="Name"
+                        asp-for='@Model.Hotel.price' />
+                    <span asp-validation-for='@Model.Hotel.price' class="text-danger  my-1 d-block"></span>
+                </div>
+                 <div class="form-group">
+                    <label asp-for='@Model.Hotel.openTime'></label>
+                    <input  class="form-control" id="exampleInputName1" placeholder="Name"
+                        asp-for='@Model.Hotel.openTime' />
+                    <span asp-validation-for='@Model.Hotel.openTime' class="text-danger  my-1 d-block"></span>
+                </div>
+                 <div class="form-group">
+                    <label asp-for='@Model.Hotel.location'></label>
+                    <input  class="form-control" id="exampleInputName1" placeholder="Name"
+                        asp-for='@Model.Hotel.location' />
+                    <span asp-validation-for='@Model.Hotel.location' class="text-danger  my-1 d-block"></span>
+                </div>
+                
+                 <div class="form-group">
+                    <label asp-for='@Model.Hotel.time'></label>
+                    <input  class="form-control" id="exampleInputName1" placeholder="Name"
+                        asp-for='@Model.Hotel.time' />
+                    <span asp-validation-for='@Model.Hotel.time' class="text-danger  my-1 d-block"></span>
+                </div>
+
+                   <div class="form-group">
+                    <label asp-for='@Model.Hotel.createdAt' hidden></label>
+                    <input  class="form-control" id="exampleInputName1" placeholder="Name"
+                        asp-for='@Model.Hotel.createdAt' hidden />
+                    <span asp-validation-for='@Model.Hotel.createdAt' hidden class="text-danger  my-1 d-block"></span>
+                </div>
+
+                
+               
+                <button type="submit" class="btn btn-primary mr-2">
+                    @{
+                        if(Model.IsConfirm) {
+                            <span>cancel confirmation</span>
+                        }else{
+                            <span>Confirm</span>
+                        }
+                    }
+                </button>
+                <button class="btn btn-light">Cancel</button>
+            </form>
+
+            
+
+        </div>
+    </div>
+</div>
+
+
+
+

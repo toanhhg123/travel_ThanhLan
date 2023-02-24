@@ -32,8 +32,10 @@ public class TourController : Controller
                 time = x.time,
                 title = x.title,
                 location = x.location,
-                mainImg = x.mainImg
+                mainImg = x.mainImg,
+                price = x.price
             }).ToListAsync();
+
             return View(tours);
         }
         catch (System.Exception)
