@@ -61,25 +61,25 @@ public class HotelController : Controller
 
 
      [HttpPost]
-    public async Task<IActionResult> Order(OrderTour orderTour,
+    public async Task<IActionResult> Order(OrderHotel orderHotel,
          string redirectUrl,
-         string tourId)
+         string id)
     {
         redirectUrl = redirectUrl ?? "/tour";
         try
         {
-            var tour = await _Dbcontext.Tours.FirstOrDefaultAsync(x => x.id == tourId);
-            if(tour == null) throw new Exception("Không tìm thấy tour Du lịch cần đặt");
+            var hotel = await _Dbcontext.Hotels.FirstOrDefaultAsync(x => x.id == id);
+            if(hotel == null) throw new Exception("Không tìm thấy hotel Du lịch cần đặt");
            
-            orderTour.Tour = tour;
-            await _Dbcontext.OrderTours.AddAsync(orderTour);
+            orderHotel.Hotel = hotel;
+            await _Dbcontext.OrderHotels.AddAsync(orderHotel);
             await _Dbcontext.SaveChangesAsync();
-            _toastNotification.AddSuccessToastMessage("dat tour thanh cong !!!");
+            _toastNotification.AddSuccessToastMessage("dat hotel thanh cong !!!");
             return Redirect(redirectUrl);
         }
         catch (System.Exception)
         {
-            _toastNotification.AddErrorToastMessage("đặt tour không thành công vui lòng nhập đầy đủ thông tin");
+            _toastNotification.AddErrorToastMessage("đặt hotel không thành công vui lòng nhập đầy đủ thông tin");
             return Redirect(redirectUrl);
         }
     }

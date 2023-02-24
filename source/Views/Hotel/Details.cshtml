@@ -91,7 +91,7 @@
                   type="button"
                   data-toggle="modal"
                   data-target="#exampleModal"
-                  value="Đặt Tour"
+                  value="Đặt Hotel"
                   class="btn btn-primary py-3 px-5"
                 />
               </div>
@@ -658,7 +658,7 @@
     aria-labelledby="exampleModalLabel"
     aria-hidden="true"
   >
-    <form asp-action="Order" asp-route-tourId="@Model.id" asp-route-redirectUrl="/tour/details/@Model.id" method="post" class="modal-dialog" role="document">
+    <form asp-action="Order" asp-route-id="@Model.id" asp-route-redirectUrl="/hotel/details/@Model.id" method="post" class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">@Model.title</h5>
