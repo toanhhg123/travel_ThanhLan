@@ -24,6 +24,10 @@ namespace source.Models
         public DbSet<Hotel> Hotels { set; get; } = default!;
 
         public DbSet<HotelImg> HotelImages { set; get; } = default!;
+
+        public DbSet<Transport> Transports { set; get; } = default!;
+
+        public DbSet<TransportImage> TransportImages { set; get; } = default!;
         public DbSet<OrderTour> OrderTours { set; get; } = default!;
         public DbSet<OrderHotel> OrderHotels { set; get; } = default!;
 
@@ -74,6 +78,19 @@ namespace source.Models
 
 
             modelBuilder.Entity<HotelImg>()
+                         .Property(b => b.id)
+                         .HasDefaultValue("newid()");
+
+            modelBuilder.Entity<Transport>()
+        .Property(b => b.id)
+        .HasDefaultValue("newid()");
+
+            modelBuilder.Entity<Transport>()
+              .Property(b => b.createdAt)
+         .HasDefaultValueSql("getdate()");
+
+
+            modelBuilder.Entity<TransportImage>()
                          .Property(b => b.id)
                          .HasDefaultValue("newid()");
 

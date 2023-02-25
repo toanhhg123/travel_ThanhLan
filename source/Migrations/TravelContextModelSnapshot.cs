@@ -350,6 +350,83 @@ namespace source.Migrations
                     b.ToTable("TourImages");
                 });
 
+            modelBuilder.Entity("source.Models.Transport", b =>
+                {
+                    b.Property<string>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(450)")
+                        .HasDefaultValue("newid()");
+
+                    b.Property<DateTime?>("createdAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("getdate()");
+
+                    b.Property<string>("departureSchedule")
+                        .HasColumnType("ntext");
+
+                    b.Property<string>("desc")
+                        .HasColumnType("ntext");
+
+                    b.Property<string>("info")
+                        .HasColumnType("ntext");
+
+                    b.Property<string>("location")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("mainImg")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("openTime")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("price")
+                        .HasColumnType("float");
+
+                    b.Property<string>("schedule")
+                        .HasColumnType("ntext");
+
+                    b.Property<string>("time")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Transports");
+                });
+
+            modelBuilder.Entity("source.Models.TransportImage", b =>
+                {
+                    b.Property<string>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(450)")
+                        .HasDefaultValue("newid()");
+
+                    b.Property<string>("Transportid")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("alt")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("src")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("Transportid");
+
+                    b.ToTable("TransportImages");
+                });
+
             modelBuilder.Entity("source.Models.Account", b =>
                 {
                     b.HasOne("source.Models.Role", "Role")
@@ -408,6 +485,15 @@ namespace source.Migrations
                     b.Navigation("Tour");
                 });
 
+            modelBuilder.Entity("source.Models.TransportImage", b =>
+                {
+                    b.HasOne("source.Models.Transport", "Transport")
+                        .WithMany("TransportImages")
+                        .HasForeignKey("Transportid");
+
+                    b.Navigation("Transport");
+                });
+
             modelBuilder.Entity("source.Models.Hotel", b =>
                 {
                     b.Navigation("HotelImgs");
@@ -416,6 +502,11 @@ namespace source.Migrations
             modelBuilder.Entity("source.Models.Tour", b =>
                 {
                     b.Navigation("TourImages");
+                });
+
+            modelBuilder.Entity("source.Models.Transport", b =>
+                {
+                    b.Navigation("TransportImages");
                 });
 #pragma warning restore 612, 618
         }

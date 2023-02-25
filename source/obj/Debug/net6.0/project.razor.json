@@ -18426,6 +18426,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/toanle/Downloads/travel-main/source/Views/Transport/index.cshtml",
+      "TargetPath": "Views\\Transport\\index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/toanle/Downloads/travel-main/source/Views/Shared/Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
@@ -18443,6 +18448,11 @@
     {
       "FilePath": "/Users/toanle/Downloads/travel-main/source/Views/Hotel/Details.cshtml",
       "TargetPath": "Views\\Hotel\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/toanle/Downloads/travel-main/source/Areas/Admin/Views/Transport/index.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Transport\\index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -18541,6 +18551,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/toanle/Downloads/travel-main/source/Areas/Admin/Views/Transport/Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Transport\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/toanle/Downloads/travel-main/source/Areas/Admin/Views/Tour/index.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\Tour\\index.cshtml",
       "FileKind": "mvc"
@@ -18548,6 +18563,11 @@
     {
       "FilePath": "/Users/toanle/Downloads/travel-main/source/Areas/Admin/Views/Tour/Details.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\Tour\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/toanle/Downloads/travel-main/source/Views/Transport/Details.cshtml",
+      "TargetPath": "Views\\Transport\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -18608,6 +18628,11 @@
     {
       "FilePath": "/Users/toanle/Downloads/travel-main/source/Views/Shared/_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/toanle/Downloads/travel-main/source/Areas/Admin/Views/Transport/create.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Transport\\create.cshtml",
       "FileKind": "mvc"
     },
     {

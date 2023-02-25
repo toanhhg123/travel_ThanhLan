@@ -65,7 +65,7 @@ public class HotelController : Controller
          string redirectUrl,
          string id)
     {
-        redirectUrl = redirectUrl ?? "/tour";
+        redirectUrl = redirectUrl ?? "/hotel";
         try
         {
             var hotel = await _Dbcontext.Hotels.FirstOrDefaultAsync(x => x.id == id);
