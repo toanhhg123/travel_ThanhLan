@@ -1,4 +1,4 @@
-@model Hotel; 
+@model Transport; 
 @{ var info = System.Globalization.CultureInfo.GetCultureInfo("vi-VN"); }
 <div
   class="hero-wrap js-fullheight"
@@ -91,7 +91,7 @@
                   type="button"
                   data-toggle="modal"
                   data-target="#exampleModal"
-                  value="Đặt Hotel"
+                  value="Đặt Ngay"
                   class="btn btn-primary py-3 px-5"
                 />
               </div>
@@ -194,7 +194,7 @@
                   style="background-image: url(/files/@Model.mainImg)"
                 ></div>
               </div>
-              @foreach (var item in Model.HotelImgs) {
+              @foreach (var item in Model.TransportImages) {
               <div class="item">
                 <div
                   class="hotel-img"
@@ -212,16 +212,7 @@
 
             @Html.Raw(Model.info)
           </div>
-          <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
-            <h4 class="mb-4">Lịch Trình</h4>
-
-            @Html.Raw(Model.schedule)
-          </div>
-          <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
-            <h4 class="mb-4">Lịch Khởi Hành</h4>
-
-            @Html.Raw(Model.departureSchedule)
-          </div>
+        
           @*
           <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
             <h4 class="mb-4">Our Rooms</h4>
@@ -658,7 +649,7 @@
     aria-labelledby="exampleModalLabel"
     aria-hidden="true"
   >
-    <form asp-action="Order" asp-route-id="@Model.id" asp-route-redirectUrl="/hotel/details/@Model.id" method="post" class="modal-dialog">
+    <form asp-action="Order" asp-route-id="@Model.id" asp-route-redirectUrl="/transport/details/@Model.id" method="post" class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">@Model.title</h5>

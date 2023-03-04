@@ -22,11 +22,12 @@ public class TourController : Controller
     }
 
     [HttpGet]
-    public async Task<IActionResult> Index()
+    public async Task<IActionResult> Index(string search)
     {
         try
         {
-            var tours = await _Dbcontext.Tours.Select(x => new Tour
+
+            var tours = _Dbcontext.Tours.Select(x => new Tour
             {
                 id = x.id,
                 time = x.time,
@@ -34,8 +35,9 @@ public class TourController : Controller
                 location = x.location,
                 mainImg = x.mainImg,
                 price = x.price
-            }).ToListAsync();
-
+            });
+            if (search != null)
+                tours = tours.Where(x => x.title.ToLower().Contains(search.ToLower()));
             return View(tours);
         }
         catch (System.Exception)
@@ -60,17 +62,17 @@ public class TourController : Controller
     }
 
 
-     [HttpPost]
+    [HttpPost]
     public async Task<IActionResult> OrderTour(OrderTour orderTour,
-         string redirectUrl,
-         string tourId)
+        string redirectUrl,
+        string tourId)
     {
         redirectUrl = redirectUrl ?? "/tour";
         try
         {
             var tour = await _Dbcontext.Tours.FirstOrDefaultAsync(x => x.id == tourId);
-            if(tour == null) throw new Exception("Không tìm thấy tour Du lịch cần đặt");
-           
+            if (tour == null) throw new Exception("Không tìm thấy tour Du lịch cần đặt");
+
             orderTour.Tour = tour;
             await _Dbcontext.OrderTours.AddAsync(orderTour);
             await _Dbcontext.SaveChangesAsync();

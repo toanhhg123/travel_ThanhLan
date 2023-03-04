@@ -248,6 +248,54 @@ namespace source.Migrations
                     b.ToTable("OrderTours");
                 });
 
+            modelBuilder.Entity("source.Models.OrderTransport", b =>
+                {
+                    b.Property<string>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(450)")
+                        .HasDefaultValue("newid()");
+
+                    b.Property<bool>("IsConfirm")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Transportid")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("adultCount")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("childrenCount")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("createdAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("getdate()");
+
+                    b.Property<string>("email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("message")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("Transportid");
+
+                    b.ToTable("OrderTransports");
+                });
+
             modelBuilder.Entity("source.Models.Role", b =>
                 {
                     b.Property<string>("id")
@@ -463,6 +511,15 @@ namespace source.Migrations
                         .HasForeignKey("Tourid");
 
                     b.Navigation("Tour");
+                });
+
+            modelBuilder.Entity("source.Models.OrderTransport", b =>
+                {
+                    b.HasOne("source.Models.Transport", "Transport")
+                        .WithMany()
+                        .HasForeignKey("Transportid");
+
+                    b.Navigation("Transport");
                 });
 
             modelBuilder.Entity("source.Models.Tour", b =>

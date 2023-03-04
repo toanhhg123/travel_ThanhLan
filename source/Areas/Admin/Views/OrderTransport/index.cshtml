@@ -1,0 +1,111 @@
+@model source.utils.PaginatedList<source.Models.OrderTransport>;
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Danh sách đặt xe</h4>
+
+            <form  class="form-group" style='width: 300px'>
+                    <div class="input-group">
+                      <input type="text" name="search" class="form-control" placeholder="Nhập địa chỉ email" aria-label="Recipient's username">
+                      <div class="input-group-append">
+                        <button class="btn btn-sm btn-primary" type="submit">Search</button>
+                      </div>
+                    </div>
+            </form>
+           
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>
+                               <div class="input-group-prepend">
+                        <div class="text-dark  dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trạng Thái</div>
+                        <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 46px, 0px);">
+                          <a class="dropdown-item" asp-route-isConfirm="true">Đã xác Nhận</a>
+                          <a class="dropdown-item"  asp-route-isConfirm="false">Chưa xác nhận</a>
+                        </div>
+                      </div>
+                            </th>
+                             <th>
+                                name
+                            </th>
+                            <th>
+                                email
+                            </th>
+                            <th>
+                                phoneNumber
+                            </th>
+                            <th>
+                                Tên Tour
+                            </th>
+
+                            <th>
+                                Ngày Đặt
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null)
+                        {
+                            foreach (var item in Model)
+                            {
+                                <tr>
+
+                                    <td>
+                                        @{
+                                            if(item.IsConfirm){
+                                            <button class="btn btn-success btn-sm">Đã Xác Nhận</button>
+                                            }
+                                            else {
+                                                <button class="btn btn-danger btn-sm">Chưa Xác Nhận</button>
+
+                                            }
+                                        }
+                                    </td>
+                                   
+                                    <td>
+                                        @item.name
+                                    </td>
+
+                                    <td>
+                                        @item.email
+                                    </td>
+
+                                     <td>
+                                        @item.phone
+                                    </td>
+
+                                    <td>
+                                        @item.Transport.title
+                                    </td>
+
+                                     <td>
+                                        @item.createdAt
+                                    </td>
+
+                                    <td class="d-flex">
+                                        <form asp-route-id="@item.id" asp-action="Delete" method="post" class="mr-2">
+                                            <button class="btn btn-danger btn-sm">Delete</button>
+                                        </form>
+                                        <a asp-action='Details' asp-route-id="@item.id" class="btn btn-info btn-sm">Details</a>
+                                    </td>
+                                </tr>
+
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+           <div class="mt-2 d-flex" style="justify-content: center">
+             @if(Model != null){
+                @if(Model.PageIndex > 1){
+                <a asp-route-pageIndex="@(Model.PageIndex - 1)" type="button" class="btn btn-primary btn-sm">pre</a>
+                }
+                @if(Model.PageIndex < Model.TotalPages){
+                    <a asp-route-pageIndex="@(Model.PageIndex + 1)"  type="button" class="btn btn-primary btn-sm">next</a>
+                }
+             }
+           </div>
+        </div>
+    </div>
+</div>

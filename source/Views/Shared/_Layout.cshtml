@@ -55,8 +55,6 @@
   <script src="~/client/js/main.js"></script>
   @await RenderSectionAsync("Scripts", required: false)
   <partial name="_ValidationScriptsPartial" />
-  @await Component.InvokeAsync("NToastNotify");
-
-
-</body>
+  @await Component.InvokeAsync("NToastNotify")
+  </body>
 </html>

@@ -11955,11 +11955,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/toanle/Downloads/travel-main/source/source.csproj",
+      "projectUniqueName": "/Users/toanle/travel-main/source/source.csproj",
       "projectName": "source",
-      "projectPath": "/Users/toanle/Downloads/travel-main/source/source.csproj",
+      "projectPath": "/Users/toanle/travel-main/source/source.csproj",
       "packagesPath": "/Users/toanle/.nuget/packages/",
-      "outputPath": "/Users/toanle/Downloads/travel-main/source/obj/",
+      "outputPath": "/Users/toanle/travel-main/source/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/toanle/.nuget/NuGet/NuGet.Config"

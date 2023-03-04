@@ -49,9 +49,9 @@ public class TransportController : Controller
     {
         try
         {
-            var hotel = await _Dbcontext.Hotels.Include(x => x.HotelImgs).FirstOrDefaultAsync(x => x.id == id);
-            if (hotel == null) throw new Exception("not found hotel");
-            return View(hotel);
+            var transport = await _Dbcontext.Transports.Include(x => x.TransportImages).FirstOrDefaultAsync(x => x.id == id);
+            if (transport == null) throw new Exception("not found transport");
+            return View(transport);
         }
         catch (System.Exception ex)
         {
@@ -61,18 +61,18 @@ public class TransportController : Controller
 
 
      [HttpPost]
-    public async Task<IActionResult> Order(OrderHotel orderHotel,
+    public async Task<IActionResult> Order(OrderTransport order,
          string redirectUrl,
          string id)
     {
-        redirectUrl = redirectUrl ?? "/hotel";
+        redirectUrl = redirectUrl ?? "/transport";
         try
         {
-            var hotel = await _Dbcontext.Hotels.FirstOrDefaultAsync(x => x.id == id);
-            if(hotel == null) throw new Exception("Không tìm thấy hotel Du lịch cần đặt");
+            var transport = await _Dbcontext.Transports.FirstOrDefaultAsync(x => x.id == id);
+            if(transport == null) throw new Exception("Không tìm thấy hotel Du lịch cần đặt");
            
-            orderHotel.Hotel = hotel;
-            await _Dbcontext.OrderHotels.AddAsync(orderHotel);
+            order.Transport = transport;
+            await _Dbcontext.OrderTransports.AddAsync(order);
             await _Dbcontext.SaveChangesAsync();
             _toastNotification.AddSuccessToastMessage("dat hotel thanh cong !!!");
             return Redirect(redirectUrl);

@@ -45,6 +45,7 @@ namespace source.Models
 
         public List<TourImage> TourImages { set; get; } = default!;
 
+        public List<OrderTour> OrderTours {set;get;} = default!;
 
     }
 

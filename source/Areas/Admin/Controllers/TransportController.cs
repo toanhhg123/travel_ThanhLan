@@ -79,16 +79,16 @@ namespace source.Areas.Admin.Controllers
         {
             try
             {
-                var hotel = await _DbContext.Hotels.Include(x => x.HotelImgs).FirstOrDefaultAsync(x => x.id == id);
-                if (hotel == null) throw new Exception("Không thể xoá Tour");
+                var tran = await _DbContext.Transports.Include(x => x.TransportImages).FirstOrDefaultAsync(x => x.id == id);
+                if (tran == null) throw new Exception("Không thể xoá Tour");
 
-                HandleFile.DeleteFile(hotel.mainImg);
-                hotel.HotelImgs.ForEach(x => HandleFile.DeleteFile(x.src));
 
-                _DbContext.Hotels.Remove(hotel);
+
+                _DbContext.Transports.Remove(tran);
                 await _DbContext.SaveChangesAsync();
                 _toastNotification.AddSuccessToastMessage("success");
-
+                HandleFile.DeleteFile(tran.mainImg);
+                tran.TransportImages.ForEach(x => HandleFile.DeleteFile(x.src));
                 return RedirectToAction("index");
 
             }

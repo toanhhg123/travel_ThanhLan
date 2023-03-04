@@ -82,10 +82,7 @@
   <script src="~/admin/js/file-upload.js"></script>
   @await RenderSectionAsync("Scripts", required: false)
   <partial name="_ValidationScriptsPartial" />
-  @await Component.InvokeAsync("NToastNotify");
-
-
-
+  @await Component.InvokeAsync("NToastNotify")
 </body>
 
 </html>

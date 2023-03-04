@@ -78,12 +78,12 @@ namespace source.Areas.Admin.Controllers
             {
                 var tour = await _DbContext.Tours.Include(x => x.TourImages).FirstOrDefaultAsync(x => x.id == id);
                 if (tour == null) throw new Exception("Không thể xoá Tour");
-
-                HandleFile.DeleteFile(tour.mainImg);
-                tour.TourImages.ForEach(x => HandleFile.DeleteFile(x.src));
-
+                _DbContext.TourImages.RemoveRange(tour.TourImages);
                 _DbContext.Tours.Remove(tour);
                 await _DbContext.SaveChangesAsync();
+                
+                HandleFile.DeleteFile(tour.mainImg);
+                tour.TourImages.ForEach(x => HandleFile.DeleteFile(x.src));
                 _toastNotification.AddSuccessToastMessage("success");
 
                 return RedirectToAction("index");

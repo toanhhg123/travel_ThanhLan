@@ -8,8 +8,8 @@
 				data-scrollax-parent="true">
 				<div class="col-md-9 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 					<p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span
-							class="mr-2"><a href="index.html">Home</a></span> <span>Places</span></p>
-					<h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Destinations
+							class="mr-2"><a href="index.html">Home</a></span> <span>Transport</span></p>
+					<h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"> Thuê xe
 					</h1>
 				</div>
 			</div>
@@ -124,28 +124,19 @@
 										</div>
 									</a>
 									<div class="text p-3">
-										<div class="d-flex">
+										<div class="">
 											<div class="one">
-												<h3><a asp-route-id="@item.id" asp-action="details">@item.title</a></h3>
-												<p class="rate">
-													<i class="icon-star"></i>
-													<i class="icon-star"></i>
-													<i class="icon-star"></i>
-													<i class="icon-star"></i>
-													<i class="icon-star-o"></i>
-													<span>8 Rating</span>
-												</p>
+												<h3 class="m-0"><a asp-route-id="@item.id" asp-action="details">@item.title</a></h3>
 											</div>
 											<div class="two">
-												<span class="price">@Utils.CreateVnd(item.price)</span>
+													<span class="price">@Utils.CreateVnd(item.price)</span>
 											</div>
 										</div>
-										<p>Far far away, behind the word mountains, far from the countries</p>
-										<p class="days"><span>2 days 3 nights</span></p>
+										<p class="days"><span>@item.time</span></p>
 										<hr>
 										<p class="bottom-area d-flex">
-											<span><i class="icon-map-o"></i> San Franciso, CA</span>
-											<span class="ml-auto"><a asp-route-id="@item.id" asp-action="details" >Discover</a></span>
+											<span><i class="icon-map-o"></i> @item.location</span>
+											<span class="ml-auto"><a asp-route-id="@item.id" asp-action="details" >Đặt ngay</a></span>
 										</p>
 									</div>
 								</div>

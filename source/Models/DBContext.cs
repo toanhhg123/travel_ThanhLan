@@ -30,6 +30,8 @@ namespace source.Models
         public DbSet<TransportImage> TransportImages { set; get; } = default!;
         public DbSet<OrderTour> OrderTours { set; get; } = default!;
         public DbSet<OrderHotel> OrderHotels { set; get; } = default!;
+        public DbSet<OrderTransport> OrderTransports { set; get; } = default!;
+
 
 
 
@@ -111,6 +113,16 @@ namespace source.Models
             modelBuilder.Entity<OrderHotel>()
                .Property(b => b.createdAt)
           .HasDefaultValueSql("getdate()");
+
+
+            modelBuilder.Entity<OrderTransport>()
+            .Property(b => b.id)
+            .HasDefaultValue("newid()");
+
+            modelBuilder.Entity<OrderTransport>()
+               .Property(b => b.createdAt)
+          .HasDefaultValueSql("getdate()");
+
 
 
 

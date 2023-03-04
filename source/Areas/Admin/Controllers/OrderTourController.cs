@@ -113,16 +113,12 @@ namespace source.Areas.Admin.Controllers
         {
             try
             {
-                var tour = await _DbContext.Tours.Include(x => x.TourImages).FirstOrDefaultAsync(x => x.id == id);
-                if (tour == null) throw new Exception("Không thể xoá Tour");
+                var order = await _DbContext.OrderTours.FirstOrDefaultAsync(x => x.id == id);
+                if(order == null) throw new Exception("Khong tim thay tour can xoa");
+                _DbContext.OrderTours.Remove(order);
 
-                HandleFile.DeleteFile(tour.mainImg);
-                tour.TourImages.ForEach(x => HandleFile.DeleteFile(x.src));
-
-                _DbContext.Tours.Remove(tour);
                 await _DbContext.SaveChangesAsync();
                 _toastNotification.AddSuccessToastMessage("success");
-
                 return RedirectToAction("index");
 
             }
