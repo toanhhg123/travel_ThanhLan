@@ -18,15 +18,14 @@ builder.Services.AddMvc().AddNToastNotifyToastr(new ToastrOptions()
 builder.Services.AddDbContext<TravelContext>(
     o => o.UseSqlServer(builder.Configuration.GetConnectionString("sql")));
 
-
-// builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-// .AddCookie(options =>
-// {
-//     options.SlidingExpiration = true;
-//     options.LoginPath = "/auth/login";
-//     options.AccessDeniedPath = "/auth/forbidden/";
-
-// });
+builder.Services.AddAuthentication("TRAVEL")
+    .AddCookie("TRAVEL", options =>
+    {
+        options.AccessDeniedPath = new PathString("/auth/Forbidden");
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(1200);
+        options.LoginPath = new PathString("/auth/Login");
+        options.SlidingExpiration = true;
+    });
 
 var app = builder.Build();
 
@@ -35,7 +34,6 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
 }
 
 

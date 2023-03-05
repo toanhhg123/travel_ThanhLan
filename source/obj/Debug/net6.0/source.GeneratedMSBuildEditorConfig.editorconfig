@@ -159,6 +159,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWJvdXQvaW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/toanle/travel-main/source/Views/Auth/Forbidden.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9Gb3JiaWRkZW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/toanle/travel-main/source/Views/Auth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/toanle/travel-main/source/Views/Contact/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGFjdC9pbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
