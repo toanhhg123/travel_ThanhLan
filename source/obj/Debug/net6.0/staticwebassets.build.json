@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nu/5sMUubLokpVgkFcypnJsUzlQd6Gz/AD1O0hhvyxg=",
+  "Hash": "PfzxM+aUxXHPh0bceiN66i58J1dKYZYhtWQJyx9urB0=",
   "Source": "source",
   "BasePath": "_content/source",
   "Mode": "Default",
@@ -14739,6 +14739,23 @@
       "OriginalItemSpec": "wwwroot/client/images/loc.png"
     },
     {
+      "Identity": "/Users/toanle/travel-main/source/wwwroot/client/images/logo.png",
+      "SourceId": "source",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/toanle/travel-main/source/wwwroot/",
+      "BasePath": "_content/source",
+      "RelativePath": "client/images/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/client/images/logo.png"
+    },
+    {
       "Identity": "/Users/toanle/travel-main/source/wwwroot/client/images/MK1 SG BẾN TRE-cơm phần- 450NAC.docx",
       "SourceId": "source",
       "SourceType": "Discovered",
@@ -15383,6 +15400,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/files/286d2728-9d23-42ba-9006-ce0a48c461a0.png"
+    },
+    {
+      "Identity": "/Users/toanle/travel-main/source/wwwroot/files/5e020d5c-8d25-42d5-a2e5-6a42a1ebdc5d.jpeg",
+      "SourceId": "source",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/toanle/travel-main/source/wwwroot/",
+      "BasePath": "_content/source",
+      "RelativePath": "files/5e020d5c-8d25-42d5-a2e5-6a42a1ebdc5d.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/files/5e020d5c-8d25-42d5-a2e5-6a42a1ebdc5d.jpeg"
     },
     {
       "Identity": "/Users/toanle/travel-main/source/wwwroot/files/88a2dfeb-c9cf-422a-8f08-cd9e40aa09ba.jpeg",

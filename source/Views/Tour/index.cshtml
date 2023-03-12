@@ -1,5 +1,9 @@
 @model IEnumerable<source.Models.Tour>
 @using source.utils;
+@{
+	var categoryTours = ViewBag.categoryTours as List<CategoryTour>;
+
+}
 
 	<div class="hero-wrap js-fullheight" style="background-image: url('/client/images/bg_1.jpg');">
 		<div class="overlay"></div>
@@ -27,7 +31,19 @@
 								<div class="form-group">
 									<input type="text" name="search" class="form-control" placeholder="...search">
 								</div>
-								
+								<div class="form-group">
+									<div class="select-wrap one-third">
+									<div class="icon"><span class="ion-ios-arrow-down"></span></div>
+									<select name="category" id="" class="form-control" placeholder="Keyword search">
+											@if(categoryTours != null){
+												foreach (var item in categoryTours)
+												{
+													<option value="@item.name">@item.name</option>
+												}
+											}
+									</select>
+								</div>
+								</div>
 								
 								<div class="form-group">
 									<input type="submit" value="Search" class="btn btn-primary py-3 px-5">

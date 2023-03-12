@@ -43,6 +43,8 @@ public class TourController : Controller
 
             if (search != null)
                 tours = tours.Where(x => x.title.ToLower().Contains(search.ToLower()));
+
+            ViewBag.categoryTours = await _Dbcontext.CategoryTours.ToListAsync();
             return View(tours);
         }
         catch (System.Exception)
