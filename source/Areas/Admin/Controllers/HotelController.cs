@@ -17,6 +17,7 @@ using NToastNotify;
 namespace source.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     // [Authorize(Roles = "ADMIN")]
     public class HotelController : Controller
     {

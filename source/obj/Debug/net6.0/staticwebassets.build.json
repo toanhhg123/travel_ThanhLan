@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1mzP0LOulZTOpjrPLWgK+FQ1vGIgAVzrD7KeYAoOj94=",
+  "Hash": "nu/5sMUubLokpVgkFcypnJsUzlQd6Gz/AD1O0hhvyxg=",
   "Source": "source",
   "BasePath": "_content/source",
   "Mode": "Default",
@@ -14348,6 +14348,40 @@
       "OriginalItemSpec": "wwwroot/client/images/.DS_Store"
     },
     {
+      "Identity": "/Users/toanle/travel-main/source/wwwroot/client/images/about.avif",
+      "SourceId": "source",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/toanle/travel-main/source/wwwroot/",
+      "BasePath": "_content/source",
+      "RelativePath": "client/images/about.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/client/images/about.avif"
+    },
+    {
+      "Identity": "/Users/toanle/travel-main/source/wwwroot/client/images/about.jpeg",
+      "SourceId": "source",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/toanle/travel-main/source/wwwroot/",
+      "BasePath": "_content/source",
+      "RelativePath": "client/images/about.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/client/images/about.jpeg"
+    },
+    {
       "Identity": "/Users/toanle/travel-main/source/wwwroot/client/images/bg_1.jpg",
       "SourceId": "source",
       "SourceType": "Discovered",
@@ -15300,12 +15334,12 @@
       "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
-      "Identity": "/Users/toanle/travel-main/source/wwwroot/files/4eac334b-177f-4747-b995-76ae321f80c6.png",
+      "Identity": "/Users/toanle/travel-main/source/wwwroot/files/0f2010ad-9639-46d9-ac9b-b1ae85a16867.png",
       "SourceId": "source",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/toanle/travel-main/source/wwwroot/",
       "BasePath": "_content/source",
-      "RelativePath": "files/4eac334b-177f-4747-b995-76ae321f80c6.png",
+      "RelativePath": "files/0f2010ad-9639-46d9-ac9b-b1ae85a16867.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -15314,15 +15348,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/files/4eac334b-177f-4747-b995-76ae321f80c6.png"
+      "OriginalItemSpec": "wwwroot/files/0f2010ad-9639-46d9-ac9b-b1ae85a16867.png"
     },
     {
-      "Identity": "/Users/toanle/travel-main/source/wwwroot/files/beea59f0-340f-4686-9c59-a7c049519d2d.png",
+      "Identity": "/Users/toanle/travel-main/source/wwwroot/files/197c3f33-4e69-4e28-a314-d7356eba210c.png",
       "SourceId": "source",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/toanle/travel-main/source/wwwroot/",
       "BasePath": "_content/source",
-      "RelativePath": "files/beea59f0-340f-4686-9c59-a7c049519d2d.png",
+      "RelativePath": "files/197c3f33-4e69-4e28-a314-d7356eba210c.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -15331,15 +15365,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/files/beea59f0-340f-4686-9c59-a7c049519d2d.png"
+      "OriginalItemSpec": "wwwroot/files/197c3f33-4e69-4e28-a314-d7356eba210c.png"
     },
     {
-      "Identity": "/Users/toanle/travel-main/source/wwwroot/files/destination-5.jpg",
+      "Identity": "/Users/toanle/travel-main/source/wwwroot/files/286d2728-9d23-42ba-9006-ce0a48c461a0.png",
       "SourceId": "source",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/toanle/travel-main/source/wwwroot/",
       "BasePath": "_content/source",
-      "RelativePath": "files/destination-5.jpg",
+      "RelativePath": "files/286d2728-9d23-42ba-9006-ce0a48c461a0.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -15348,15 +15382,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/files/destination-5.jpg"
+      "OriginalItemSpec": "wwwroot/files/286d2728-9d23-42ba-9006-ce0a48c461a0.png"
     },
     {
-      "Identity": "/Users/toanle/travel-main/source/wwwroot/files/fe706c84-c46e-4ab1-8091-f7e2802d2d84.png",
+      "Identity": "/Users/toanle/travel-main/source/wwwroot/files/88a2dfeb-c9cf-422a-8f08-cd9e40aa09ba.jpeg",
       "SourceId": "source",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/toanle/travel-main/source/wwwroot/",
       "BasePath": "_content/source",
-      "RelativePath": "files/fe706c84-c46e-4ab1-8091-f7e2802d2d84.png",
+      "RelativePath": "files/88a2dfeb-c9cf-422a-8f08-cd9e40aa09ba.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -15365,7 +15399,41 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/files/fe706c84-c46e-4ab1-8091-f7e2802d2d84.png"
+      "OriginalItemSpec": "wwwroot/files/88a2dfeb-c9cf-422a-8f08-cd9e40aa09ba.jpeg"
+    },
+    {
+      "Identity": "/Users/toanle/travel-main/source/wwwroot/files/a77bee37-eaf8-4abc-bde7-d8fba7c3ecaa.png",
+      "SourceId": "source",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/toanle/travel-main/source/wwwroot/",
+      "BasePath": "_content/source",
+      "RelativePath": "files/a77bee37-eaf8-4abc-bde7-d8fba7c3ecaa.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/files/a77bee37-eaf8-4abc-bde7-d8fba7c3ecaa.png"
+    },
+    {
+      "Identity": "/Users/toanle/travel-main/source/wwwroot/files/a93fc0fe-7117-4b05-9854-e7d60d2936c3.png",
+      "SourceId": "source",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/toanle/travel-main/source/wwwroot/",
+      "BasePath": "_content/source",
+      "RelativePath": "files/a93fc0fe-7117-4b05-9854-e7d60d2936c3.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/files/a93fc0fe-7117-4b05-9854-e7d60d2936c3.png"
     },
     {
       "Identity": "/Users/toanle/travel-main/source/wwwroot/js/site.js",

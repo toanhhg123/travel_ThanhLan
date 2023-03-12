@@ -17,7 +17,6 @@ namespace source.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize]
-    // [Authorize(Roles = "ADMIN")]
     public class AccountController : Controller
     {
         private readonly TravelContext _DbContext;
@@ -46,24 +45,24 @@ namespace source.Areas.Admin.Controllers
         }
 
 
-        // [HttpGet]
-        // public async Task<IActionResult> SeedRoles()
-        // {
+        [HttpGet]
+        public async Task<IActionResult> SeedRoles()
+        {
 
-        //     await _DbContext.Roles.ForEachAsync(x =>
-        //     {
-        //         _DbContext.Roles.Remove(x);
-        //     });
-        //     List<Role> roles = new List<Role>() {
-        //         new Role() {RoleName = "ADMIN"},
-        //         new Role() {RoleName = "USER"},
+            await _DbContext.Roles.ForEachAsync(x =>
+            {
+                _DbContext.Roles.Remove(x);
+            });
+            List<Role> roles = new List<Role>() {
+                new Role() {RoleName = "ADMIN"},
+                new Role() {RoleName = "USER"},
 
-        //     };
-        //     await _DbContext.Roles.AddRangeAsync(roles);
-        //     await _DbContext.SaveChangesAsync();
+            };
+            await _DbContext.Roles.AddRangeAsync(roles);
+            await _DbContext.SaveChangesAsync();
 
-        //     return Ok(roles);
-        // }
+            return Ok(roles);
+        }
 
 
         [HttpPost]

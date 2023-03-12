@@ -10,6 +10,8 @@ using Microsoft.Extensions.Logging;
 namespace source.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
+
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

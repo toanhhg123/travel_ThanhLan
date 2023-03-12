@@ -22,11 +22,12 @@ public class TransportController : Controller
     }
 
     [HttpGet]
-    public async Task<IActionResult> Index()
+    public async Task<IActionResult> Index(string search)
     {
+
         try
         {
-            var data = await _Dbcontext.Transports.Select(x => new Transport
+            var trans =  _Dbcontext.Transports.Select(x => new Transport
             {
                 id = x.id,
                 time = x.time,
@@ -34,8 +35,11 @@ public class TransportController : Controller
                 location = x.location,
                 mainImg = x.mainImg,
                 price = x.price
-            }).ToListAsync();
+            });
+            if(search != null)
+                trans = trans.Where(x => x.title.ToLower().Contains(search.ToLower()));
 
+            var data = await trans.ToListAsync();
             return View(data);
         }
         catch (System.Exception)

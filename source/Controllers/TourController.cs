@@ -22,20 +22,25 @@ public class TourController : Controller
     }
 
     [HttpGet]
-    public async Task<IActionResult> Index(string search)
+    public async Task<IActionResult> Index(string search, string category)
     {
         try
         {
 
-            var tours = _Dbcontext.Tours.Select(x => new Tour
+            var tours =  _Dbcontext.Tours.Select(x => new Tour
             {
                 id = x.id,
                 time = x.time,
                 title = x.title,
                 location = x.location,
                 mainImg = x.mainImg,
-                price = x.price
+                price = x.price,
+                categoryTour = x.categoryTour
             });
+
+            if(category != null)
+                tours = tours.Where(x => x.categoryTour.name.ToLower().Contains(category.ToLower()));
+
             if (search != null)
                 tours = tours.Where(x => x.title.ToLower().Contains(search.ToLower()));
             return View(tours);

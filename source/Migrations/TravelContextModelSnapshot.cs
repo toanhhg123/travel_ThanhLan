@@ -507,7 +507,7 @@ namespace source.Migrations
             modelBuilder.Entity("source.Models.OrderTour", b =>
                 {
                     b.HasOne("source.Models.Tour", "Tour")
-                        .WithMany()
+                        .WithMany("OrderTours")
                         .HasForeignKey("Tourid");
 
                     b.Navigation("Tour");
@@ -558,6 +558,8 @@ namespace source.Migrations
 
             modelBuilder.Entity("source.Models.Tour", b =>
                 {
+                    b.Navigation("OrderTours");
+
                     b.Navigation("TourImages");
                 });
 

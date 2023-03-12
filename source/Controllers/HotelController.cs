@@ -22,11 +22,11 @@ public class HotelController : Controller
     }
 
     [HttpGet]
-    public async Task<IActionResult> Index()
+    public async Task<IActionResult> Index(string search)
     {
         try
         {
-            var hotels = await _Dbcontext.Hotels.Select(x => new Hotel
+            var hotels =  _Dbcontext.Hotels.Select(x => new Hotel
             {
                 id = x.id,
                 time = x.time,
@@ -34,9 +34,14 @@ public class HotelController : Controller
                 location = x.location,
                 mainImg = x.mainImg,
                 price = x.price
-            }).ToListAsync();
+            });
 
-            return View(hotels);
+            if(search != null)
+                hotels = hotels.Where(x => x.title.ToLower().Contains(search.ToLower()));
+
+            var data = await hotels.ToListAsync();
+
+            return View(data);
         }
         catch (System.Exception)
         {
