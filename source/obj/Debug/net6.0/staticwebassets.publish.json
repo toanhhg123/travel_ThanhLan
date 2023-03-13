@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HlRhlsIMWsFor+XtRvJBYywkb4FTek5pdc/7nJnKA04=",
+  "Hash": "A0iUeb6H6zihg+LAxqVnAyePmxssmF1vCgHAFkPB5UM=",
   "Source": "source",
   "BasePath": "_content/source",
   "Mode": "Default",
@@ -15485,6 +15485,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/files/a93fc0fe-7117-4b05-9854-e7d60d2936c3.png"
+    },
+    {
+      "Identity": "/Users/toanle/travel-main/source/wwwroot/files/bff629e0-c8d8-48b0-92ba-9dc1cb126eb3.jpeg",
+      "SourceId": "source",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/toanle/travel-main/source/wwwroot/",
+      "BasePath": "_content/source",
+      "RelativePath": "files/bff629e0-c8d8-48b0-92ba-9dc1cb126eb3.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/files/bff629e0-c8d8-48b0-92ba-9dc1cb126eb3.jpeg"
     },
     {
       "Identity": "/Users/toanle/travel-main/source/wwwroot/files/d5332730-e14f-4f9b-85c0-cbf91850459e.png",

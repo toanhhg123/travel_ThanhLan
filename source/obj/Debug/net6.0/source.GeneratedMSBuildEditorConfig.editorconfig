@@ -211,14 +211,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/toanle/travel-main/source/Views/Tour copy/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG91ciBjb3B5L0RldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/toanle/travel-main/source/Views/Tour copy/index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG91ciBjb3B5L2luZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Users/toanle/travel-main/source/Views/Tour/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG91ci9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -233,6 +225,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/toanle/travel-main/source/Views/Transport/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNwb3J0L2luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/toanle/travel-main/source/Views/Visa/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmlzYS9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/toanle/travel-main/source/Views/Visa/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmlzYS9pbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/toanle/travel-main/source/Views/_ViewImports.cshtml]
