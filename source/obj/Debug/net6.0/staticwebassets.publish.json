@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "i8W1sJlF62sV6SsGk5idJYFQMAEbbl7GJUF5TLflUbs=",
+  "Hash": "HlRhlsIMWsFor+XtRvJBYywkb4FTek5pdc/7nJnKA04=",
   "Source": "source",
   "BasePath": "_content/source",
   "Mode": "Default",
@@ -14739,6 +14739,23 @@
       "OriginalItemSpec": "wwwroot/client/images/loc.png"
     },
     {
+      "Identity": "/Users/toanle/travel-main/source/wwwroot/client/images/logo.png",
+      "SourceId": "source",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/toanle/travel-main/source/wwwroot/",
+      "BasePath": "_content/source",
+      "RelativePath": "client/images/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/client/images/logo.png"
+    },
+    {
       "Identity": "/Users/toanle/travel-main/source/wwwroot/client/images/MK1 SG BẾN TRE-cơm phần- 450NAC.docx",
       "SourceId": "source",
       "SourceType": "Discovered",
@@ -15385,6 +15402,40 @@
       "OriginalItemSpec": "wwwroot/files/286d2728-9d23-42ba-9006-ce0a48c461a0.png"
     },
     {
+      "Identity": "/Users/toanle/travel-main/source/wwwroot/files/42397803-6717-420f-bd43-b73dc01275eb.jpeg",
+      "SourceId": "source",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/toanle/travel-main/source/wwwroot/",
+      "BasePath": "_content/source",
+      "RelativePath": "files/42397803-6717-420f-bd43-b73dc01275eb.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/files/42397803-6717-420f-bd43-b73dc01275eb.jpeg"
+    },
+    {
+      "Identity": "/Users/toanle/travel-main/source/wwwroot/files/5e020d5c-8d25-42d5-a2e5-6a42a1ebdc5d.jpeg",
+      "SourceId": "source",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/toanle/travel-main/source/wwwroot/",
+      "BasePath": "_content/source",
+      "RelativePath": "files/5e020d5c-8d25-42d5-a2e5-6a42a1ebdc5d.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/files/5e020d5c-8d25-42d5-a2e5-6a42a1ebdc5d.jpeg"
+    },
+    {
       "Identity": "/Users/toanle/travel-main/source/wwwroot/files/88a2dfeb-c9cf-422a-8f08-cd9e40aa09ba.jpeg",
       "SourceId": "source",
       "SourceType": "Discovered",
@@ -15434,6 +15485,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/files/a93fc0fe-7117-4b05-9854-e7d60d2936c3.png"
+    },
+    {
+      "Identity": "/Users/toanle/travel-main/source/wwwroot/files/d5332730-e14f-4f9b-85c0-cbf91850459e.png",
+      "SourceId": "source",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/toanle/travel-main/source/wwwroot/",
+      "BasePath": "_content/source",
+      "RelativePath": "files/d5332730-e14f-4f9b-85c0-cbf91850459e.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/files/d5332730-e14f-4f9b-85c0-cbf91850459e.png"
     },
     {
       "Identity": "/Users/toanle/travel-main/source/wwwroot/js/site.js",

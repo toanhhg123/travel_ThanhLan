@@ -32,7 +32,7 @@ namespace source.Areas.Admin.Controllers
             _toastNotification = toastNotification;
         }
 
-        public async Task<IActionResult> Index(int sort = 0, bool isConfirm = false, int pageIndex = 1, string search = "")
+        public async Task<IActionResult> Index( bool isConfirm ,int sort = 0, int pageIndex = 1, string search = "")
         {
              
             Console.WriteLine(search);
@@ -47,8 +47,12 @@ namespace source.Areas.Admin.Controllers
                     id = x.Tour.id,
                     title = x.Tour.title
                 }
-            }).Where(x => x.IsConfirm == isConfirm && (x.email.ToLower().Contains(search.ToLower()) || x.phone.ToLower().Contains(search.ToLower())));
+            }).Where(x => (x.email.ToLower().Contains(search.ToLower()) || x.phone.ToLower().Contains(search.ToLower())));
             if(tours == null) throw new Exception("not found !!");
+
+            if(isConfirm){
+                tours = tours.Where(x => x.IsConfirm == isConfirm);
+            }
             var orderTours =  await PaginatedList<OrderTour>.CreateAsync(tours,pageIndex,10);
             return View(orderTours);
         }

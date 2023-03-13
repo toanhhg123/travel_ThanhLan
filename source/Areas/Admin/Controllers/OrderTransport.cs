@@ -32,7 +32,7 @@ namespace source.Areas.Admin.Controllers
             _toastNotification = toastNotification;
         }
 
-        public async Task<IActionResult> Index(int sort = 0, bool isConfirm = false, int pageIndex = 1, string search = "")
+        public async Task<IActionResult> Index( bool isConfirm, int sort = 0, int pageIndex = 1, string search = "")
         {
 
             var orders = _DbContext.OrderTransports.Select(x => new OrderTransport()
@@ -48,7 +48,8 @@ namespace source.Areas.Admin.Controllers
                     id = x.Transport.id,
                     title = x.Transport.title
                 }
-            }).Where(x => x.IsConfirm == isConfirm && (x.email.ToLower().Contains(search.ToLower()) || x.phone.ToLower().Contains(search.ToLower())));
+            }).Where(x =>  (x.email.ToLower().Contains(search.ToLower()) || x.phone.ToLower().Contains(search.ToLower())));
+            if(isConfirm) orders = orders.Where(x => x.IsConfirm == isConfirm);
             if (orders == null) throw new Exception("not found !!");
             var ordersPagi = await PaginatedList<OrderTransport>.CreateAsync(orders, pageIndex, 10);
             return View(ordersPagi);
