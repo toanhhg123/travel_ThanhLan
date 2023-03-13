@@ -18406,8 +18406,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/toanle/travel-main/source/Areas/Admin/Views/Hotel copy/Details.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Hotel copy\\Details.cshtml",
+      "FilePath": "/Users/toanle/travel-main/source/Views/Tour copy/index.cshtml",
+      "TargetPath": "Views\\Tour copy\\index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/toanle/travel-main/source/Areas/Admin/Views/Visa/create.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Visa\\create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -18421,13 +18426,18 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/toanle/travel-main/source/Areas/Admin/Views/Hotel/index.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Hotel\\index.cshtml",
+      "FilePath": "/Users/toanle/travel-main/source/Areas/Admin/Views/Visa/index.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Visa\\index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/toanle/travel-main/source/Areas/Admin/Views/Hotel copy/index.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Hotel copy\\index.cshtml",
+      "FilePath": "/Users/toanle/travel-main/source/Areas/Admin/Views/Visa/Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Visa\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/toanle/travel-main/source/Areas/Admin/Views/Hotel/index.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Hotel\\index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -18438,11 +18448,6 @@
     {
       "FilePath": "/Users/toanle/travel-main/source/Areas/Files/Views/_ViewStart.cshtml",
       "TargetPath": "Areas\\Files\\Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/toanle/travel-main/source/Areas/Admin/Views/Hotel copy/create.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Hotel copy\\create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -18618,6 +18623,11 @@
     {
       "FilePath": "/Users/toanle/travel-main/source/Areas/Files/Views/Shared/_Layout.cshtml",
       "TargetPath": "Areas\\Files\\Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/toanle/travel-main/source/Views/Tour copy/Details.cshtml",
+      "TargetPath": "Views\\Tour copy\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
